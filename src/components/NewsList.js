@@ -15,17 +15,20 @@ const NewsList = ({news}) => {
             />
             {
                 news.error.length > 0
-                    ? <h3> Error retrieving data! </h3>
+                    ?
+                    <h3> Error retrieving data! </h3>
                     :
-                    <Grid stackable columns={4}>{
-                        news.news.map(item => <NewsCard key={item.asset_id} title={item.title}
-                                                        image={item.media[0]['media-metadata'][2].url}
-                                                        views={typeof item.views === "undefined" ? item.total_shares : item.views}
-                                                        url={item.url}
-                                                        type={typeof item.type === "undefined" ? "" : item.type}
-                                                        section={item.section}
-                                                        abstract={item.abstract}/>)
-                    }</Grid>
+                    <Grid stackable columns={4}>
+                        {
+                            news.news.map(item => <NewsCard key={item.asset_id} title={item.title}
+                                                            image={item.media[0]['media-metadata'][2].url}
+                                                            views={typeof item.views === "undefined" ? item.total_shares : item.views}
+                                                            url={item.url}
+                                                            type={typeof item.type === "undefined" ? "" : item.type}
+                                                            section={item.section}
+                                                            abstract={item.abstract}/>)
+                        }
+                    </Grid>
 
             }
 

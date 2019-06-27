@@ -17,10 +17,10 @@ const NewsCard = (state) => (
                 description={state.abstract}
                 extra={
                         <span>
-                        <Icon name='user'/>
-                            {state.views}
-                            <span style={styles.extraSection}>{state.section}</span>
-                    </span>
+                            <Icon name='user'/>
+                                {state.views}
+                                <span style={styles.extraSection}>{state.section}</span>
+                        </span>
 
                     }
             />
