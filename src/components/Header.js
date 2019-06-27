@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Image, Menu, Visibility} from "semantic-ui-react";
+import {Container, Image, Menu, Visibility, Responsive} from "semantic-ui-react";
 import {fixedMenuStyle, menuStyle} from "../helpers/styleHelper";
 import {Link, NavLink} from "react-router-dom";
 
@@ -25,7 +25,8 @@ class Header extends Component {
                     onBottomVisible={this.unStickTopMenu}
                     once={false}>
                     <Menu
-                        borderless
+                        stackable
+
                         fixed={menuFixed ? 'top' : undefined}
                         style={menuFixed ? fixedMenuStyle : menuStyle}>
                         <Container text>
@@ -33,9 +34,15 @@ class Header extends Component {
                                 <Image size='mini' src='https://react.semantic-ui.com/logo.png'/>
                                 <Menu.Item header>Mini Servie App</Menu.Item>
                             </Menu.Item>
-                            <Menu.Item as={NavLink} to="/mostviewed">Most Viewed News</Menu.Item>
-                            <Menu.Item as={NavLink} to="/mostshared">Most Shared News</Menu.Item>
-                            <Menu.Item as={NavLink} to="/mostemailed">Most Emailed News</Menu.Item>
+                            <Menu.Item as={NavLink} to="/mostviewed">
+                                Most Viewed News
+                            </Menu.Item>
+                            <Menu.Item as={NavLink} to="/mostshared">
+                                Most Shared News
+                            </Menu.Item>
+                            <Menu.Item as={NavLink} to="/mostemailed">
+                                Most Emailed News
+                            </Menu.Item>
                         </Container>
                     </Menu>
                 </Visibility>

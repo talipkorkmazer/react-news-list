@@ -10,10 +10,10 @@ import {
 
 import {Route} from "react-router-dom";
 import Header from './components/Header';
+import Homepage from "./components/pages/Homepage";
 import MostViewedPage from "./components/pages/MostViewedPage";
 import MostSharedPage from "./components/pages/MostSharedPage";
 import MostEmailedPage from "./components/pages/MostEmailedPage";
-import NewsPage from "./components/pages/NewsPage";
 
 class App extends Component {
     render() {
@@ -21,7 +21,7 @@ class App extends Component {
             <div className="App">
                 <Header/>
                 <Container>
-                    <Route exact path="/" component={NewsPage}></Route>
+                    <Route exact path="/" component={Homepage}></Route>
                     <Route path="/mostviewed" component={MostViewedPage}></Route>
                     <Route path="/mostshared" component={MostSharedPage}></Route>
                     <Route path="/mostemailed" component={MostEmailedPage}></Route>

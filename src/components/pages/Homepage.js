@@ -6,7 +6,7 @@ import NewsList from '../NewsList';
 
 import {fetchHome} from '../../actions/news';
 
-class NewsPage extends Component {
+class Homepage extends Component {
 
     static propTypes = {
         news: PropTypes.object.isRequired
@@ -36,4 +36,4 @@ const mapDispatchToProps = {
     fetchHome
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);
