@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import NewsList from '../NewsList';
 
-import {fetchMostViewed} from '../../actions/news';
+import {fetchHome} from '../../actions/news';
 
 class NewsPage extends Component {
 
@@ -13,13 +13,13 @@ class NewsPage extends Component {
     };
 
     componentDidMount() {
-        this.props.fetchMostViewed();
+        this.props.fetchHome();
     }
 
     render() {
         return (
             <div>
-                <h2>News Page</h2>
+                <h2>Home Page</h2>
                 <NewsList news={this.props.news}></NewsList>
             </div>
         );
@@ -33,7 +33,7 @@ const mapStateToProps = ({news}) => {
 };
 
 const mapDispatchToProps = {
-    fetchMostViewed
+    fetchHome
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);
