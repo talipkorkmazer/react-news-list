@@ -26,13 +26,14 @@ class Header extends Component {
                     once={false}>
                     <Menu
                         stackable
-
+                        borderless
                         fixed={menuFixed ? 'top' : undefined}
                         style={menuFixed ? fixedMenuStyle : menuStyle}>
                         <Container text>
                             <Menu.Item as={Link} to="/" exact="true">
                                 <Image size='mini' src='https://react.semantic-ui.com/logo.png'/>
                                 <Menu.Item header>Mini Servie App</Menu.Item>
+
                             </Menu.Item>
                             <Menu.Item as={NavLink} to="/mostviewed">
                                 Most Viewed News
